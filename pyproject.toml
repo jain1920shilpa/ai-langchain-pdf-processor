@@ -12,6 +12,7 @@ ignore = ["SIM108"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+pythonpath = ["."]
 addopts = "-q"
 markers = [
     "integration: calls the live Gemini API (set RUN_INTEGRATION=1 to enable)",
