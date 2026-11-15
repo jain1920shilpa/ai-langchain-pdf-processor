@@ -40,7 +40,7 @@ def get_settings() -> Settings:
 
 def get_summarizer(settings: Settings, model: str) -> PDFSummarizer:
     """Recreate the summarizer only when the selected model changes."""
-    key = ("summarizer", model)
+    key = f"summarizer::{model}"
     if key not in st.session_state:
         st.session_state[key] = PDFSummarizer(model=model, settings=settings)
     return st.session_state[key]
